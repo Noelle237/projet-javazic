@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.*?>
+
+<HBox xmlns:fx="http://javafx.com/fxml"
+      fx:controller="javazic.controllers.MusicPlayerController"
+      styleClass="music-player" alignment="CENTER_LEFT" spacing="32"
+      stylesheets="@../styles.css">
+
+    <padding><Insets top="12" right="24" bottom="12" left="24"/></padding>
+
+    <!-- Info morceau (gauche) -->
+    <HBox spacing="14" alignment="CENTER_LEFT" prefWidth="280" minWidth="280">
+        <ImageView fx:id="playerCover" fitWidth="56" fitHeight="56"
+                   preserveRatio="true" styleClass="player-cover"/>
+        <VBox spacing="4">
+            <Label fx:id="playerTitre" text="Aucun morceau" styleClass="player-title"/>
+            <Label fx:id="playerArtiste" text="—" styleClass="player-artist"/>
+        </VBox>
+    </HBox>
+
+    <!-- Contrôles centraux -->
+    <VBox HBox.hgrow="ALWAYS" alignment="CENTER" spacing="8">
+        <!-- Boutons contrôle -->
+        <HBox alignment="CENTER" spacing="20">
+            <Button fx:id="btnShuffle" text="⇄" styleClass="ctrl-btn" onAction="#handleShuffle"/>
+            <Button fx:id="btnPrev" text="⏮" styleClass="ctrl-btn" onAction="#handlePrev"/>
+            <Button fx:id="btnPlayPause" text="▶" styleClass="ctrl-btn-main"
+                    onAction="#handlePlayPause"/>
+            <Button fx:id="btnNext" text="⏭" styleClass="ctrl-btn" onAction="#handleNext"/>
+            <Button fx:id="btnRepeat" text="↻" styleClass="ctrl-btn" onAction="#handleRepeat"/>
+        </HBox>
+        <!-- Barre de progression -->
+        <HBox alignment="CENTER" spacing="10">
+            <Label fx:id="currentTime" text="0:00" styleClass="time-label"/>
+            <Slider fx:id="progressBar" HBox.hgrow="ALWAYS" min="0" max="100" value="0"
+                    styleClass="progress-slider"/>
+            <Label fx:id="totalTime" text="0:00" styleClass="time-label"/>
+        </HBox>
+    </VBox>
+
+    <!-- Volume (droite) -->
+    <HBox spacing="10" alignment="CENTER" prefWidth="160" minWidth="160">
+        <Label text="🔊" styleClass="volume-icon"/>
+        <Slider fx:id="volumeSlider" min="0" max="100" value="75" HBox.hgrow="ALWAYS"
+                styleClass="volume-slider"/>
+    </HBox>
+</HBox>

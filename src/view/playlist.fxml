@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.*?>
+
+<HBox xmlns:fx="http://javafx.com/fxml"
+      fx:controller="javazic.controllers.PlaylistsController"
+      styleClass="page-content" spacing="0"
+      stylesheets="@../styles.css">
+
+    <!-- Panneau gauche : liste des playlists -->
+    <VBox styleClass="playlists-sidebar" prefWidth="280" spacing="12">
+        <padding><Insets top="24" right="16" bottom="24" left="16"/></padding>
+
+        <Label text="Mes Playlists" styleClass="page-title"/>
+        <Button text="+ Nouvelle playlist" maxWidth="Infinity"
+                styleClass="btn-primary" onAction="#handleCreerPlaylist"/>
+
+        <ListView fx:id="listePlaylists" VBox.vgrow="ALWAYS" styleClass="playlists-list"/>
+    </VBox>
+
+    <Separator orientation="VERTICAL"/>
+
+    <!-- Panneau droit : contenu de la playlist sélectionnée -->
+    <VBox HBox.hgrow="ALWAYS" spacing="24">
+        <padding><Insets top="24" right="32" bottom="24" left="32"/></padding>
+
+        <!-- Vide si aucune sélection -->
+        <VBox fx:id="emptyState" alignment="CENTER" VBox.vgrow="ALWAYS" spacing="16">
+            <Label text="📋" style="-fx-font-size: 64px;"/>
+            <Label text="Sélectionnez une playlist" styleClass="title-lg"/>
+            <Label text="ou créez-en une nouvelle" styleClass="subtitle"/>
+        </VBox>
+
+        <!-- Contenu playlist -->
+        <VBox fx:id="playlistContent" spacing="20" visible="false" managed="false" VBox.vgrow="ALWAYS">
+            <HBox spacing="16" alignment="CENTER_LEFT">
+                <Label text="📋" style="-fx-font-size: 64px;"/>
+                <VBox spacing="6">
+                    <Label fx:id="playlistNom" text="" styleClass="title-lg"/>
+                    <Label fx:id="playlistStats" text="" styleClass="subtitle"/>
+                    <HBox spacing="8">
+                        <Button text="▶  Lecture" styleClass="btn-primary" onAction="#handleLire"/>
+                        <Button text="🗑  Supprimer" styleClass="btn-danger"
+                                onAction="#handleSupprimer"/>
+                    </HBox>
+                </VBox>
+            </HBox>
+
+            <TableView fx:id="tableMorceaux" VBox.vgrow="ALWAYS" styleClass="main-table">
+                <columns>
+                    <TableColumn fx:id="colNum" text="#" prefWidth="50"/>
+                    <TableColumn fx:id="colTitre" text="Titre" prefWidth="250"/>
+                    <TableColumn fx:id="colArtiste" text="Artiste" prefWidth="160"/>
+                    <TableColumn fx:id="colDuree" text="Durée" prefWidth="80"/>
+                    <TableColumn fx:id="colRetirer" text="" prefWidth="60"/>
+                </columns>
+            </TableView>
+        </VBox>
+    </VBox>
+</HBox>

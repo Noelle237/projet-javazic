@@ -1,0 +1,86 @@
+admin.fxml
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.*?>
+
+<VBox xmlns:fx="http://javafx.com/fxml"
+      fx:controller="javazic.controllers.AdminController"
+      styleClass="page-content" spacing="24"
+      stylesheets="@../styles.css">
+
+    <padding><Insets top="32" right="32" bottom="32" left="32"/></padding>
+
+    <Label text="Dashboard Administrateur" styleClass="page-title"/>
+
+    <TabPane styleClass="main-tabs" VBox.vgrow="ALWAYS">
+
+        <!-- Onglet Statistiques -->
+        <Tab text="📊 Statistiques" closable="false">
+            <VBox spacing="24">
+                <padding><Insets top="24" right="0" bottom="0" left="0"/></padding>
+                <GridPane hgap="16" vgap="16">
+                    <VBox styleClass="stat-card" GridPane.columnIndex="0" GridPane.rowIndex="0">
+                        <Label text="🎵" style="-fx-font-size: 32px;"/>
+                        <Label fx:id="statMorceaux" text="0" styleClass="stat-value"/>
+                        <Label text="Morceaux" styleClass="stat-label"/>
+                    </VBox>
+                    <VBox styleClass="stat-card" GridPane.columnIndex="1" GridPane.rowIndex="0">
+                        <Label text="💿" style="-fx-font-size: 32px;"/>
+                        <Label fx:id="statAlbums" text="0" styleClass="stat-value"/>
+                        <Label text="Albums" styleClass="stat-label"/>
+                    </VBox>
+                    <VBox styleClass="stat-card" GridPane.columnIndex="2" GridPane.rowIndex="0">
+                        <Label text="🎤" style="-fx-font-size: 32px;"/>
+                        <Label fx:id="statArtistes" text="0" styleClass="stat-value"/>
+                        <Label text="Artistes" styleClass="stat-label"/>
+                    </VBox>
+                    <VBox styleClass="stat-card" GridPane.columnIndex="3" GridPane.rowIndex="0">
+                        <Label text="👥" style="-fx-font-size: 32px;"/>
+                        <Label fx:id="statAbonnes" text="0" styleClass="stat-value"/>
+                        <Label text="Abonnés" styleClass="stat-label"/>
+                    </VBox>
+                </GridPane>
+            </VBox>
+        </Tab>
+
+        <!-- Onglet Catalogue -->
+        <Tab text="🎵 Catalogue" closable="false">
+            <VBox spacing="12">
+                <padding><Insets top="16" right="0" bottom="0" left="0"/></padding>
+                <HBox spacing="10">
+                    <Button text="+ Ajouter morceau" styleClass="btn-primary"
+                            onAction="#handleAjouterMorceau"/>
+                    <Button text="+ Ajouter album" styleClass="btn-outline"
+                            onAction="#handleAjouterAlbum"/>
+                    <Button text="+ Ajouter artiste" styleClass="btn-outline"
+                            onAction="#handleAjouterArtiste"/>
+                </HBox>
+                <TableView fx:id="tableCatalogue" VBox.vgrow="ALWAYS" styleClass="main-table">
+                    <columns>
+                        <TableColumn fx:id="colType" text="Type" prefWidth="100"/>
+                        <TableColumn fx:id="colNom" text="Nom" prefWidth="250"/>
+                        <TableColumn fx:id="colInfo" text="Info" prefWidth="200"/>
+                        <TableColumn fx:id="colActions" text="Actions" prefWidth="120"/>
+                    </columns>
+                </TableView>
+            </VBox>
+        </Tab>
+
+        <!-- Onglet Abonnés -->
+        <Tab text="👥 Abonnés" closable="false">
+            <VBox spacing="12">
+                <padding><Insets top="16" right="0" bottom="0" left="0"/></padding>
+                <TableView fx:id="tableAbonnes" VBox.vgrow="ALWAYS" styleClass="main-table">
+                    <columns>
+                        <TableColumn fx:id="colUsername" text="Nom d'utilisateur" prefWidth="200"/>
+                        <TableColumn fx:id="colStatut" text="Statut" prefWidth="120"/>
+                        <TableColumn fx:id="colDateInscription" text="Inscription" prefWidth="150"/>
+                        <TableColumn fx:id="colActionsUser" text="Actions" prefWidth="150"/>
+                    </columns>
+                </TableView>
+            </VBox>
+        </Tab>
+
+    </TabPane>
+</VBox>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.*?>
+
+<VBox xmlns:fx="http://javafx.com/fxml"
+      fx:controller="javazic.controllers.AlbumDetailController"
+      styleClass="page-content" spacing="32"
+      stylesheets="@../styles.css">
+
+    <padding><Insets top="32" right="32" bottom="32" left="32"/></padding>
+
+    <!-- Bouton retour -->
+    <Button text="← Retour" styleClass="btn-back" onAction="#handleRetour"/>
+
+    <!-- En-tête album -->
+    <HBox spacing="32" alignment="TOP_LEFT">
+        <ImageView fx:id="albumCover" fitWidth="200" fitHeight="200" preserveRatio="true"
+                   styleClass="album-cover"/>
+
+        <VBox spacing="12" HBox.hgrow="ALWAYS">
+            <Label text="ALBUM" styleClass="type-label"/>
+            <Label fx:id="albumTitre" text="" styleClass="title-xl"/>
+            <Label fx:id="albumArtiste" text="" styleClass="artiste-link"/>
+            <Label fx:id="albumInfos" text="" styleClass="subtitle"/>
+
+            <HBox spacing="12" alignment="CENTER_LEFT">
+                <Button fx:id="btnLecture" text="▶  Lecture"
+                        styleClass="btn-primary" onAction="#handleLecture"/>
+                <Label fx:id="genreTag" text="" styleClass="tag"/>
+            </HBox>
+        </VBox>
+    </HBox>
+
+    <Separator/>
+
+    <!-- Liste des morceaux -->
+    <VBox spacing="8" VBox.vgrow="ALWAYS">
+        <Label text="Morceaux" styleClass="section-title"/>
+        <TableView fx:id="tableMorceaux" styleClass="main-table" VBox.vgrow="ALWAYS">
+            <columns>
+                <TableColumn fx:id="colNumero" text="#" prefWidth="50"/>
+                <TableColumn fx:id="colTitre" text="Titre" prefWidth="300"/>
+                <TableColumn fx:id="colGenre" text="Genre" prefWidth="120"/>
+                <TableColumn fx:id="colDuree" text="Durée" prefWidth="80"/>
+            </columns>
+        </TableView>
+    </VBox>
+</VBox>

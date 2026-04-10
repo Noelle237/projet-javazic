@@ -1,0 +1,203 @@
+/* === GLOBAL === */
+.root {
+    -fx-background-color: #0d1117;
+    -fx-font-family: "Inter", "Segoe UI", sans-serif;
+    -fx-text-fill: #e6edf3;
+}
+
+/* === WELCOME === */
+.welcome-screen { -fx-background-color: #0d1117; }
+.title-xl { -fx-font-size: 36px; -fx-font-weight: bold; -fx-text-fill: #e6edf3; }
+.title-lg { -fx-font-size: 22px; -fx-font-weight: bold; -fx-text-fill: #e6edf3; }
+.subtitle { -fx-font-size: 13px; -fx-text-fill: #8b949e; }
+.footer-text { -fx-font-size: 11px; -fx-text-fill: #484f58; }
+
+.menu-btn {
+    -fx-background-color: #161b22;
+    -fx-text-fill: #e6edf3;
+    -fx-padding: 14 20;
+    -fx-background-radius: 10;
+    -fx-cursor: hand;
+    -fx-font-size: 14px;
+    -fx-border-color: #30363d;
+    -fx-border-radius: 10;
+    -fx-border-width: 1;
+}
+.menu-btn:hover { -fx-background-color: #21262d; }
+.menu-btn-accent {
+    -fx-background-color: #3fb950;
+    -fx-text-fill: white;
+    -fx-padding: 14 20;
+    -fx-background-radius: 10;
+    -fx-cursor: hand;
+    -fx-font-size: 14px;
+}
+.menu-btn-accent:hover { -fx-background-color: #2ea043; }
+.menu-btn-ghost {
+    -fx-background-color: transparent;
+    -fx-text-fill: #6e7681;
+    -fx-padding: 14 20;
+    -fx-cursor: hand;
+    -fx-font-size: 13px;
+}
+
+/* === SIDEBAR === */
+.sidebar { -fx-background-color: #161b22; }
+.sidebar-sep { -fx-background-color: #21262d; }
+.logo-title { -fx-font-size: 18px; -fx-font-weight: bold; -fx-text-fill: #3fb950; }
+.role-badge { -fx-font-size: 11px; -fx-text-fill: #8b949e; }
+
+.nav-item {
+    -fx-background-color: transparent;
+    -fx-text-fill: #8b949e;
+    -fx-alignment: CENTER_LEFT;
+    -fx-padding: 10 16;
+    -fx-background-radius: 8;
+    -fx-cursor: hand;
+    -fx-font-size: 13px;
+}
+.nav-item:hover { -fx-background-color: #21262d; -fx-text-fill: #e6edf3; }
+.nav-item-active { -fx-background-color: #21262d; -fx-text-fill: #3fb950; }
+.nav-item-admin {
+    -fx-background-color: transparent;
+    -fx-text-fill: #f78166;
+    -fx-alignment: CENTER_LEFT;
+    -fx-padding: 10 16;
+    -fx-background-radius: 8;
+    -fx-cursor: hand;
+}
+.nav-item-ghost {
+    -fx-background-color: transparent;
+    -fx-text-fill: #6e7681;
+    -fx-alignment: CENTER_LEFT;
+    -fx-padding: 10 16;
+    -fx-cursor: hand;
+    -fx-font-size: 13px;
+}
+
+/* === PAGES === */
+.page-content { -fx-background-color: #0d1117; }
+.page-title { -fx-font-size: 28px; -fx-font-weight: bold; -fx-text-fill: #e6edf3; }
+.page-subtitle { -fx-font-size: 14px; -fx-text-fill: #8b949e; }
+.section-title { -fx-font-size: 18px; -fx-font-weight: bold; -fx-text-fill: #e6edf3; }
+.type-label { -fx-font-size: 11px; -fx-text-fill: #3fb950; -fx-font-weight: bold; }
+
+.search-input {
+    -fx-background-color: #161b22;
+    -fx-text-fill: #e6edf3;
+    -fx-prompt-text-fill: #8b949e;
+    -fx-border-color: #30363d;
+    -fx-border-radius: 8;
+    -fx-background-radius: 8;
+    -fx-padding: 10 16;
+    -fx-font-size: 14px;
+}
+
+/* === BOUTONS === */
+.btn-primary {
+    -fx-background-color: #3fb950;
+    -fx-text-fill: white;
+    -fx-padding: 10 24;
+    -fx-background-radius: 20;
+    -fx-cursor: hand;
+    -fx-font-weight: bold;
+}
+.btn-primary:hover { -fx-background-color: #2ea043; }
+.btn-outline {
+    -fx-background-color: transparent;
+    -fx-text-fill: #e6edf3;
+    -fx-border-color: #30363d;
+    -fx-border-radius: 20;
+    -fx-background-radius: 20;
+    -fx-padding: 10 24;
+    -fx-cursor: hand;
+}
+.btn-back {
+    -fx-background-color: transparent;
+    -fx-text-fill: #8b949e;
+    -fx-cursor: hand;
+    -fx-font-size: 13px;
+}
+.btn-back:hover { -fx-text-fill: #e6edf3; }
+.btn-danger {
+    -fx-background-color: #da3633;
+    -fx-text-fill: white;
+    -fx-background-radius: 20;
+    -fx-padding: 10 24;
+    -fx-cursor: hand;
+}
+.btn-ghost {
+    -fx-background-color: transparent;
+    -fx-text-fill: #8b949e;
+    -fx-cursor: hand;
+}
+
+/* === TABLEVIEW === */
+.main-table { -fx-background-color: #161b22; -fx-border-color: #30363d; }
+.table-view .column-header { -fx-background-color: #161b22; }
+.table-view .column-header .label { -fx-text-fill: #8b949e; -fx-font-size: 12px; }
+.table-row-cell { -fx-background-color: transparent; -fx-text-fill: #e6edf3; }
+.table-row-cell:odd { -fx-background-color: #0d1117; }
+.table-row-cell:hover { -fx-background-color: #21262d; }
+.table-row-cell:selected { -fx-background-color: #1f6feb33; }
+
+/* === MUSIC PLAYER === */
+.music-player {
+    -fx-background-color: #161b22;
+    -fx-border-color: #30363d transparent transparent transparent;
+    -fx-border-width: 1 0 0 0;
+}
+.player-title { -fx-font-size: 14px; -fx-font-weight: bold; -fx-text-fill: #e6edf3; }
+.player-artist { -fx-font-size: 12px; -fx-text-fill: #8b949e; }
+.ctrl-btn {
+    -fx-background-color: transparent;
+    -fx-text-fill: #8b949e;
+    -fx-font-size: 18px;
+    -fx-cursor: hand;
+    -fx-background-radius: 50%;
+    -fx-padding: 6;
+}
+.ctrl-btn:hover { -fx-text-fill: #e6edf3; }
+.ctrl-btn-main {
+    -fx-background-color: white;
+    -fx-text-fill: black;
+    -fx-font-size: 16px;
+    -fx-background-radius: 50%;
+    -fx-min-width: 38px; -fx-min-height: 38px;
+    -fx-cursor: hand;
+}
+.time-label { -fx-font-size: 11px; -fx-text-fill: #8b949e; }
+
+/* === STAT CARDS === */
+.stat-card {
+    -fx-background-color: #161b22;
+    -fx-border-color: #30363d;
+    -fx-border-radius: 12;
+    -fx-background-radius: 12;
+    -fx-padding: 20;
+    -fx-spacing: 8;
+    -fx-alignment: CENTER;
+    -fx-min-width: 160;
+}
+.stat-value { -fx-font-size: 32px; -fx-font-weight: bold; -fx-text-fill: #3fb950; }
+.stat-label { -fx-font-size: 13px; -fx-text-fill: #8b949e; }
+
+/* === MISC === */
+.tag {
+    -fx-background-color: #21262d;
+    -fx-text-fill: #8b949e;
+    -fx-padding: 4 12;
+    -fx-background-radius: 20;
+    -fx-font-size: 12px;
+}
+.form-label { -fx-font-size: 13px; -fx-text-fill: #8b949e; }
+.form-input {
+    -fx-background-color: #161b22;
+    -fx-text-fill: #e6edf3;
+    -fx-border-color: #30363d;
+    -fx-border-radius: 8;
+    -fx-background-radius: 8;
+    -fx-padding: 10 14;
+}
+.error-text { -fx-text-fill: #f85149; -fx-font-size: 13px; }
+.playlists-sidebar { -fx-background-color: #161b22; }

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.*?>
+
+<VBox xmlns:fx="http://javafx.com/fxml"
+      fx:controller="javazic.controllers.ArtisteDetailController"
+      styleClass="page-content" spacing="32"
+      stylesheets="@../styles.css">
+
+    <padding><Insets top="32" right="32" bottom="32" left="32"/></padding>
+
+    <Button text="← Retour" styleClass="btn-back" onAction="#handleRetour"/>
+
+    <!-- En-tête artiste -->
+    <HBox spacing="32" alignment="CENTER_LEFT">
+        <StackPane>
+            <ImageView fx:id="artistePhoto" fitWidth="160" fitHeight="160"
+                       preserveRatio="true" styleClass="artiste-photo"/>
+        </StackPane>
+        <VBox spacing="8">
+            <Label fx:id="artisteType" text="" styleClass="type-label"/>
+            <Label fx:id="artisteNom" text="" styleClass="title-xl"/>
+            <Label fx:id="artisteStats" text="" styleClass="subtitle"/>
+            <HBox fx:id="membresBox" spacing="8" visible="false" managed="false"/>
+        </VBox>
+    </HBox>
+
+    <!-- Morceaux populaires -->
+    <VBox spacing="8">
+        <Label text="Morceaux populaires" styleClass="section-title"/>
+        <TableView fx:id="tableTopMorceaux" prefHeight="220" styleClass="main-table">
+            <columns>
+                <TableColumn fx:id="colNum" text="#" prefWidth="50"/>
+                <TableColumn fx:id="colTitre" text="Titre" prefWidth="280"/>
+                <TableColumn fx:id="colAlbum" text="Album" prefWidth="180"/>
+                <TableColumn fx:id="colDuree" text="Durée" prefWidth="80"/>
+            </columns>
+        </TableView>
+    </VBox>
+
+    <!-- Discographie -->
+    <VBox spacing="12">
+        <Label text="Discographie" styleClass="section-title"/>
+        <ScrollPane fitToWidth="true">
+            <FlowPane fx:id="discographie" hgap="16" vgap="16" prefWrapLength="900">
+                <padding><Insets top="8" right="8" bottom="8" left="8"/></padding>
+            </FlowPane>
+        </ScrollPane>
+    </VBox>
+</VBox>

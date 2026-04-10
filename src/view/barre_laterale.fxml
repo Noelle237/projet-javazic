@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.*?>
+
+<VBox xmlns:fx="http://javafx.com/fxml"
+      fx:controller="javazic.controllers.SidebarController"
+      styleClass="sidebar" prefWidth="240"
+      stylesheets="@../styles.css">
+
+    <!-- Logo -->
+    <HBox styleClass="sidebar-logo" spacing="12" alignment="CENTER_LEFT">
+        <padding><Insets top="24" right="16" bottom="24" left="16"/></padding>
+        <Label text="🎵" style="-fx-font-size: 28px;"/>
+        <VBox>
+            <Label text="JAVAZIC" styleClass="logo-title"/>
+            <Label fx:id="roleLabel" text="Visiteur" styleClass="role-badge"/>
+        </VBox>
+    </HBox>
+
+    <Separator styleClass="sidebar-sep"/>
+
+    <!-- Navigation -->
+    <VBox fx:id="navContainer" VBox.vgrow="ALWAYS" spacing="4">
+        <padding><Insets top="12" right="8" bottom="12" left="8"/></padding>
+
+        <Button fx:id="navCatalogue" text="🎵  Catalogue"
+                maxWidth="Infinity" styleClass="nav-item" onAction="#goToCatalogue"/>
+        <Button fx:id="navPlaylists" text="📋  Mes Playlists"
+                maxWidth="Infinity" styleClass="nav-item" onAction="#goToPlaylists"/>
+        <!-- Visible seulement pour abonné/admin -->
+        <Button fx:id="navHistorique" text="⏱  Historique"
+                maxWidth="Infinity" styleClass="nav-item" onAction="#goToHistorique"/>
+        <!-- Visible seulement pour admin -->
+        <Button fx:id="navAdmin" text="⚙  Administration"
+                maxWidth="Infinity" styleClass="nav-item-admin" onAction="#goToAdmin"
+                visible="false" managed="false"/>
+    </VBox>
+
+    <Separator styleClass="sidebar-sep"/>
+
+    <!-- Déconnexion -->
+    <VBox>
+        <padding><Insets top="8" right="8" bottom="16" left="8"/></padding>
+        <Button fx:id="btnLogout" text="🚪  Déconnexion"
+                maxWidth="Infinity" styleClass="nav-item-ghost" onAction="#handleLogout"/>
+    </VBox>
+</VBox>

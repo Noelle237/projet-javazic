@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.*?>
+
+<VBox xmlns:fx="http://javafx.com/fxml"
+      fx:controller="javazic.controllers.CatalogueController"
+      styleClass="page-content" spacing="24"
+      stylesheets="@../styles.css">
+
+    <padding><Insets top="32" right="32" bottom="32" left="32"/></padding>
+
+    <!-- En-tête -->
+    <VBox spacing="6">
+        <Label text="Catalogue Musical" styleClass="page-title"/>
+        <Label text="Découvrez notre collection de musiques" styleClass="page-subtitle"/>
+    </VBox>
+
+    <!-- Barre de recherche -->
+    <TextField fx:id="searchField" promptText="🔍  Rechercher un titre, artiste ou album..."
+               styleClass="search-input"/>
+
+    <!-- Onglets -->
+    <TabPane fx:id="tabPane" VBox.vgrow="ALWAYS" styleClass="main-tabs">
+
+        <Tab text="Morceaux" closable="false">
+            <TableView fx:id="tableMorceaux" styleClass="main-table">
+                <columns>
+                    <TableColumn fx:id="colNumero" text="#" prefWidth="50"/>
+                    <TableColumn fx:id="colTitre" text="Titre" prefWidth="250"/>
+                    <TableColumn fx:id="colArtiste" text="Artiste" prefWidth="180"/>
+                    <TableColumn fx:id="colGenre" text="Genre" prefWidth="120"/>
+                    <TableColumn fx:id="colDuree" text="Durée" prefWidth="80"/>
+                    <TableColumn fx:id="colActions" text="" prefWidth="60"/>
+                </columns>
+            </TableView>
+        </Tab>
+
+        <Tab text="Albums" closable="false">
+            <ScrollPane fitToWidth="true" styleClass="scroll-albums">
+                <FlowPane fx:id="gridAlbums" hgap="16" vgap="16" prefWrapLength="900">
+                    <padding><Insets top="16" right="16" bottom="16" left="16"/></padding>
+                </FlowPane>
+            </ScrollPane>
+        </Tab>
+
+        <Tab text="Artistes" closable="false">
+            <ScrollPane fitToWidth="true">
+                <FlowPane fx:id="gridArtistes" hgap="16" vgap="16" prefWrapLength="900">
+                    <padding><Insets top="16" right="16" bottom="16" left="16"/></padding>
+                </FlowPane>
+            </ScrollPane>
+        </Tab>
+
+    </TabPane>
+</VBox>
