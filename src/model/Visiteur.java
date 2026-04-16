@@ -1,3 +1,6 @@
+package model;
+import java.util.ArrayList;
+
 class Visiteur extends Utilisateur {
 
     public static final int MAX_ECOUTES_VISITEUR = 5;

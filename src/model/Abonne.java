@@ -1,3 +1,6 @@
+package model;
+import java.util.ArrayList;
+
 class Abonne extends Utilisateur {
 
     // --- Attributs ---

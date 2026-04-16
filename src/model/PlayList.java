@@ -1,3 +1,7 @@
+package model;
+import java.io.Serializable;
+import java.util.ArrayList;
+
 class PlayList implements Serializable {
 
     // --- Attributs ---

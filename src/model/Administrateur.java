@@ -1,3 +1,6 @@
+package model;
+import java.util.ArrayList;
+
 class Administrateur extends Utilisateur {
 
     // --- Constructeur ---
