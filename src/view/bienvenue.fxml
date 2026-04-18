@@ -5,7 +5,7 @@
 <?import javafx.geometry.*?>
 
 <StackPane xmlns:fx="http://javafx.com/fxml"
-           fx:controller="controller.BienvenueController"
+         fx:controller="controlleur.BienvenueController"
            styleClass="welcome-screen"
            stylesheets="@../styles.css">
 

@@ -5,7 +5,7 @@
 <?import javafx.geometry.*?>
 
 <VBox xmlns:fx="http://javafx.com/fxml"
-      fx:controller="javazic.controllers.AlbumDetailController"
+      fx:controller="controlleur.AlbumController"
       styleClass="page-content" spacing="32"
       stylesheets="@../styles.css">
 

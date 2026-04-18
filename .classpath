@@ -6,8 +6,6 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry excluding="model/|controller/|view/" kind="src" path="src"/>
-	<classpathentry kind="src" path="src/controller"/>
-	<classpathentry kind="src" path="src/model"/>
 	<classpathentry kind="src" path="src/view"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/javafx"/>
 	<classpathentry kind="output" path="bin"/>

@@ -4,7 +4,7 @@
 <?import javafx.geometry.*?>
 
 <VBox xmlns:fx="http://javafx.com/fxml"
-      fx:controller="javazic.controllers.AuthController"
+      fx:controller="controller.AuthentificationController"
       spacing="20" styleClass="auth-dialog"
       stylesheets="@../styles.css">
 

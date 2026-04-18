@@ -5,7 +5,7 @@ admin.fxml
 <?import javafx.geometry.*?>
 
 <VBox xmlns:fx="http://javafx.com/fxml"
-      fx:controller="javazic.controllers.AdminController"
+      fx:controller="controlleur.AdminController"
       styleClass="page-content" spacing="24"
       stylesheets="@../styles.css">
 

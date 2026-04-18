@@ -4,7 +4,7 @@
 <?import javafx.geometry.*?>
 
 <HBox xmlns:fx="http://javafx.com/fxml"
-      fx:controller="javazic.controllers.PlaylistsController"
+      fx:controller="controller.PlaylistViewController"
       styleClass="page-content" spacing="0"
       stylesheets="@../styles.css">
 
