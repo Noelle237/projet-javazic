@@ -1,8 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.*?>
 
-<?import javafx.scene.layout.AnchorPane?>
+<StackPane xmlns:fx="http://javafx.com/fxml"
+           fx:controller="javazic.controllers.WelcomeController"
+           styleClass="welcome-screen"
+           stylesheets="@../styles.css">
 
-<AnchorPane xmlns:fx="http://javafx.com/fxml/1">
-	<!-- TODO Add Nodes -->
-</AnchorPane>
+    <VBox alignment="CENTER" spacing="40" maxWidth="480">
 
+        <!-- Logo + Titre -->
+        <HBox alignment="CENTER" spacing="16">
+            <Label text="🎵" style="-fx-font-size: 48px;"/>
+            <VBox>
+                <Label text="JAVAZIC" styleClass="title-xl"/>
+                <Label text="Votre plateforme de streaming musical" styleClass="subtitle"/>
+            </VBox>
+        </HBox>
+
+        <!-- Boutons menu -->
+        <VBox spacing="12" fillWidth="true">
+            <Button fx:id="btnAdmin" text="👤  Se connecter en tant qu'administrateur"
+                    maxWidth="Infinity" styleClass="menu-btn" onAction="#handleAdmin"/>
+            <Button fx:id="btnClient" text="🎧  Se connecter en tant que client"
+                    maxWidth="Infinity" styleClass="menu-btn" onAction="#handleClient"/>
+            <Button fx:id="btnCreer" text="✨  Créer un compte client"
+                    maxWidth="Infinity" styleClass="menu-btn-accent" onAction="#handleCreer"/>
+            <Button fx:id="btnVisiteur" text="👁  Continuer en tant que visiteur"
+                    maxWidth="Infinity" styleClass="menu-btn" onAction="#handleVisiteur"/>
+            <Button fx:id="btnQuitter" text="Quitter"
+                    maxWidth="Infinity" styleClass="menu-btn-ghost" onAction="#handleQuitter"/>
+        </VBox>
+
+        <Label text="© 2024 JAVAZIC — Tous droits réservés" styleClass="footer-text"/>
+    </VBox>
+</StackPane>
