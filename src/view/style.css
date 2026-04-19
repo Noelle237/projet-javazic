@@ -5,6 +5,7 @@
     -fx-text-fill: #e6edf3;
 }
 
+
 /* === WELCOME === */
 .welcome-screen { -fx-background-color: #0d1117; }
 .title-xl { -fx-font-size: 36px; -fx-font-weight: bold; -fx-text-fill: #e6edf3; }

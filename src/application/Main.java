@@ -11,10 +11,8 @@ public class Main extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception {
         Parent root = FXMLLoader.load(getClass().getResource("/view/bienvenue.fxml"));
-        primaryStage.setTitle("JAVAZIC - Streaming Musical");
-        primaryStage.setScene(new Scene(root, 900, 600));
-        primaryStage.setMinWidth(800);
-        primaryStage.setMinHeight(550);
+        primaryStage.setTitle("JAVAZIC");
+        primaryStage.setScene(new Scene(root, 800, 600));
         primaryStage.show();
     }
 

@@ -4,9 +4,9 @@
 <?import javafx.geometry.*?>
 
 <HBox xmlns:fx="http://javafx.com/fxml"
-      fx:controller="controller.PlaylistViewController"
+      fx:controller="controlleur.PlaylistController"
       styleClass="page-content" spacing="0"
-      stylesheets="@../styles.css">
+      stylesheets="@style.css">
 
     <!-- Panneau gauche : liste des playlists -->
     <VBox styleClass="playlists-sidebar" prefWidth="280" spacing="12">

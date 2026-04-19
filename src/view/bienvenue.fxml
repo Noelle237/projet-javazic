@@ -7,7 +7,7 @@
 <StackPane xmlns:fx="http://javafx.com/fxml"
          fx:controller="controlleur.BienvenueController"
            styleClass="welcome-screen"
-           stylesheets="@../styles.css">
+           stylesheets="@style.css">
 
     <VBox alignment="CENTER" spacing="40" maxWidth="480">
 

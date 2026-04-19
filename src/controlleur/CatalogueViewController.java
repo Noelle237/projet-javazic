@@ -1,4 +1,4 @@
-package controlleur;
+/*package controlleur;
 
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -122,4 +122,4 @@ public class CatalogueViewController implements Initializable {
             e.printStackTrace();
         }
     }
-}
+}*/
