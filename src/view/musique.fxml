@@ -5,9 +5,9 @@
 <?import javafx.geometry.*?>
 
 <HBox xmlns:fx="http://javafx.com/fxml"
-      fx:controller="javazic.controllers.MusicPlayerController"
+     fx:controller="controlleur.MusiqueController"
       styleClass="music-player" alignment="CENTER_LEFT" spacing="32"
-      stylesheets="@../styles.css">
+      stylesheets="@style.css">
 
     <padding><Insets top="12" right="24" bottom="12" left="24"/></padding>
 

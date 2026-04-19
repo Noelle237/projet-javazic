@@ -1,25 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?import javafx.scene.layout.*?>
-<?import javafx.fxml.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.*?>
 
 <BorderPane xmlns:fx="http://javafx.com/fxml"
-            fx:controller="javazic.controllers.MainController"
-            styleClass="main-layout"
-            stylesheets="@../styles.css"
+           fx:controller="controlleur.AccueilController"
+            stylesheets="@style.css"
             prefWidth="1280" prefHeight="800">
 
     <!-- Sidebar -->
     <left>
-        <fx:include source="sidebar.fxml" fx:id="sidebar"/>
+        <fx:include source="barre_laterale.fxml"/>
     </left>
 
     <!-- Zone de contenu principale -->
     <center>
-        <StackPane fx:id="contentArea" styleClass="content-area"/>
+        <StackPane fx:id="contentArea" style="-fx-background-color:#0d1117;"/>
     </center>
 
-    <!-- Lecteur musical en bas -->
-    <bottom>
-        <fx:include source="music-player.fxml" fx:id="player"/>
-    </bottom>
 </BorderPane>

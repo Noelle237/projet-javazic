@@ -4,9 +4,9 @@
 <?import javafx.geometry.*?>
 
 <VBox xmlns:fx="http://javafx.com/fxml"
-      fx:controller="javazic.controllers.SidebarController"
+     fx:controller="controlleur.BarreLateraleController"
       styleClass="sidebar" prefWidth="240"
-      stylesheets="@../styles.css">
+      stylesheets="@style.css">
 
     <!-- Logo -->
     <HBox styleClass="sidebar-logo" spacing="12" alignment="CENTER_LEFT">
@@ -39,7 +39,7 @@
 
     <Separator styleClass="sidebar-sep"/>
 
-    <!-- Déconnexion -->
+    <!-- Déconnexion -->    
     <VBox>
         <padding><Insets top="8" right="8" bottom="16" left="8"/></padding>
         <Button fx:id="btnLogout" text="🚪  Déconnexion"

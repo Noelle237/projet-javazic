@@ -1,8 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.*?>
 
-<?import javafx.scene.layout.AnchorPane?>
+<VBox xmlns:fx="http://javafx.com/fxml"
+      fx:controller="controlleur.HistoriqueController"
+      styleClass="page-content" spacing="24"
+      stylesheets="@style.css">
 
-<AnchorPane xmlns:fx="http://javafx.com/fxml/1">
-	<!-- TODO Add Nodes -->
-</AnchorPane>
+    <padding><Insets top="32" right="32" bottom="32" left="32"/></padding>
 
+    <VBox spacing="6">
+        <Label text="Historique d'écoute" styleClass="page-title"/>
+        <Label text="Vos morceaux récemment écoutés" styleClass="page-subtitle"/>
+    </VBox>
+
+    <ListView fx:id="listeHistorique" VBox.vgrow="ALWAYS" styleClass="history-list"/>
+</VBox>
