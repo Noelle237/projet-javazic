@@ -1,9 +1,11 @@
 
 package modele;
+import java.io.Serializable;
 
-public class Artiste {
+public class Artiste implements Serializable {
     private String nom;
     private String biographie;
+    private static final long serialVersionUID = 1L;
 
     public Artiste(String nom, String biographie) {
         this.nom = nom;

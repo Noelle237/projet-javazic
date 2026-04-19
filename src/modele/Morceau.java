@@ -1,11 +1,14 @@
 package modele;
 
-public class Morceau {
+import java.io.Serializable;
+
+public class Morceau implements Serializable {
     private String titre;
     private int duree; // en secondes
     private String genre;
     private Album album;
     private Artiste artiste;
+    private static final long serialVersionUID = 1L;
 
     public Morceau(String titre, int duree, String genre, Album album, Artiste artiste) {
         this.titre = titre;
@@ -20,6 +23,10 @@ public class Morceau {
     public String getGenre() { return genre; }
     public Album getAlbum() { return album; }
     public Artiste getArtiste() { return artiste; }
+    private String cheminFichier;
+
+    public String getCheminFichier() { return cheminFichier; }
+    public void setCheminFichier(String chemin) { cheminFichier = chemin; }
 
     public String getDureeFormatee() {
         return String.format("%d:%02d", duree / 60, duree % 60);

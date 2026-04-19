@@ -7,9 +7,12 @@ import modele.Morceau;
 
 public class AppContext {
     private static AppContext instance;
+
     private Abonne abonneCourant;
     private Album albumCourant;
     private Artiste artisteCourant;
+    private Morceau morceauCourant;
+    private String modeConnexion;
 
     private AppContext() {}
 
@@ -17,12 +20,7 @@ public class AppContext {
         if (instance == null) instance = new AppContext();
         return instance;
     }
-    
-    private Morceau morceauCourant;
 
-    public Morceau getMorceauCourant() { return morceauCourant; }
-    public void setMorceauCourant(Morceau m) { morceauCourant = m; } 
-    
     public Abonne getAbonneCourant() { return abonneCourant; }
     public void setAbonneCourant(Abonne a) { abonneCourant = a; }
 
@@ -31,4 +29,10 @@ public class AppContext {
 
     public Artiste getArtisteCourant() { return artisteCourant; }
     public void setArtisteCourant(Artiste a) { artisteCourant = a; }
+
+    public Morceau getMorceauCourant() { return morceauCourant; }
+    public void setMorceauCourant(Morceau m) { morceauCourant = m; }
+
+    public String getModeConnexion() { return modeConnexion; }
+    public void setModeConnexion(String mode) { modeConnexion = mode; }
 }

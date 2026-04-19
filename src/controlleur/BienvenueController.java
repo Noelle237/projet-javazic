@@ -19,7 +19,13 @@ public class BienvenueController {
     @FXML
     private void handleAdmin() {
         AppContext.getInstance().setModeConnexion("admin");
-        chargerVue("/view/authentification.fxml");
+        boolean adminExiste = modele.Gestionnaire.getInstance().getUtilisateurs()
+            .stream().anyMatch(u -> u instanceof modele.Administrateur);
+        if (!adminExiste) {
+            chargerVue("/view/inscription.fxml");
+        } else {
+            chargerVue("/view/authentification.fxml");
+        }
     }
 
     @FXML
@@ -31,7 +37,7 @@ public class BienvenueController {
     @FXML
     private void handleCreer() {
         AppContext.getInstance().setModeConnexion("creer");
-        chargerVue("/view/authentification.fxml");
+        chargerVue("/view/inscription.fxml");
     }
 
     @FXML

@@ -1,15 +1,17 @@
 package modele;
 
 import java.util.ArrayList;
+import java.io.Serializable;
 import java.util.List;
 
-public class Album {
+public class Album  implements Serializable {
     private String titre;
     private int annee;
     private Artiste artiste;
     private String genre;
     private String coverUrl;
     private List<Morceau> morceaux;
+    private static final long serialVersionUID = 1L;
 
     public Album(String titre, int annee, Artiste artiste, String genre, String coverUrl) {
         this.titre = titre;

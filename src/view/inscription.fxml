@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.*?>
+
+<VBox xmlns:fx="http://javafx.com/fxml"
+      fx:controller="controlleur.InscriptionController"
+      spacing="20"
+      stylesheets="@style.css"
+      style="-fx-background-color:#0d1117; -fx-padding: 40;">
+
+    <Label fx:id="inscriptionTitle" text="Créer un compte" styleClass="title-lg"/>
+
+    <VBox spacing="6">
+        <Label text="Identifiant *" styleClass="form-label"/>
+        <TextField fx:id="fieldIdentifiant" promptText="Choisissez un identifiant"
+                   styleClass="form-input"/>
+    </VBox>
+
+    <VBox spacing="6">
+        <Label text="Mot de passe *" styleClass="form-label"/>
+        <PasswordField fx:id="fieldMotDePasse" promptText="Choisissez un mot de passe"
+                       styleClass="form-input"/>
+    </VBox>
+
+    <VBox spacing="6">
+        <Label text="Confirmer le mot de passe *" styleClass="form-label"/>
+        <PasswordField fx:id="fieldConfirmation" promptText="Confirmez votre mot de passe"
+                       styleClass="form-input"/>
+    </VBox>
+
+    <VBox spacing="6">
+        <Label text="Nom *" styleClass="form-label"/>
+        <TextField fx:id="fieldNom" promptText="Votre nom"
+                   styleClass="form-input"/>
+    </VBox>
+
+    <VBox spacing="6">
+        <Label text="Prénom *" styleClass="form-label"/>
+        <TextField fx:id="fieldPrenom" promptText="Votre prénom"
+                   styleClass="form-input"/>
+    </VBox>
+
+    <VBox spacing="6">
+        <Label text="Email *" styleClass="form-label"/>
+        <TextField fx:id="fieldEmail" promptText="Votre email"
+                   styleClass="form-input"/>
+    </VBox>
+
+    <Label fx:id="errorLabel" styleClass="error-text" visible="false" managed="false"/>
+
+    <HBox spacing="12" alignment="CENTER_RIGHT">
+        <Button text="Annuler" styleClass="menu-btn-ghost" onAction="#handleAnnuler"/>
+        <Button fx:id="btnInscrire" text="✅  S'inscrire"
+                styleClass="menu-btn-accent" onAction="#handleInscrire"/>
+    </HBox>
+
+</VBox>

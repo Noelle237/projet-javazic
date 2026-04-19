@@ -1,13 +1,15 @@
 package modele;
 
 import java.util.ArrayList;
+import java.io.Serializable;
 import java.util.List;
 import java.util.stream.Collectors;
 
-public class Catalogue {
+public class Catalogue implements Serializable {
     private List<Album> albums;
     private List<Morceau> morceaux;
     private List<Artiste> artistes;
+    private static final long serialVersionUID = 1L;
 
     public Catalogue() {
         this.albums = new ArrayList<>();

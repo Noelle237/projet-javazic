@@ -1,6 +1,11 @@
 package modele;
 
-public abstract class Utilisateur {
+import java.io.Serializable;
+
+public abstract class Utilisateur implements Serializable {
+    
+    private static final long serialVersionUID = 1L;
+    
     protected String identifiant;
     protected String motDePasse;
     protected String nom;

@@ -1,9 +1,13 @@
 package modele;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Abonne extends Utilisateur {
+public class Abonne extends Utilisateur implements Serializable {
+
+    private static final long serialVersionUID = 1L;
+
     private List<PlayList> playlists;
     private List<Morceau> historique;
 
